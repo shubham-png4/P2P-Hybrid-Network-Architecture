@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P Mesh Link: Serverless Share</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h2>🔗 P2P Serverless Chat & File Stream</h2>
+        <div id="connection-status">Disconnected</div>
+    </header>
+
+    <main>
+        <section class="setup-zone">
+            <input type="text" id="username" placeholder="Enter your identity username...">
+            <button onclick="registerSelf()">Connect Network</button>
+            
+            <h3>Available Target Peers:</h3>
+            <ul id="peer-list-ui"></ul>
+        </section>
+
+        <section class="chat-zone">
+            <div id="chat-window"></div>
+            <div class="input-row">
+                <input type="text" id="chat-input" placeholder="Type a decentralized message..." disabled>
+                <input type="file" id="file-input" disabled>
+                <button id="send-btn" onclick="sendMessage()" disabled>Send</button>
+            </div>
+            <div id="progress-bar">Progress: 0%</div>
+        </section>
+    </main>
+
+    <script src="client.js"></script>
+</body>
+</html>
